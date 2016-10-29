@@ -1,19 +1,29 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
-//i dont get it
+
 int main(void)
 {
     float a, b, c, d;
     float x1, x2;
     printf("Enter a, b and c\n");
     scanf("%f%f%f", &a, &b, &c);
+    if (a==0 && b==0 && c!=0)
+    {
+        printf("IMPOSSIBRU!\n");
+        return 0;
+    }
     if (a==0 && c!=0) {
         x1 = -b/c;
         printf("x = %f\n", x1);
         return 0;
     }
     if (a==0 && c==0) {
+        if (b == 0)
+        {
+            printf("Infinite number of solutions\n");
+            return 0;
+        }
         printf("x = 0\n");
         return 0;
     }

@@ -41,7 +41,7 @@ int main(int argc, const char * argv[]) {
             printf("WOW, it's not hex!\n");
             return 0;
         }
-        if (a != 2)
+        if (a <= 2)
             a++;
     }
     if (a)
